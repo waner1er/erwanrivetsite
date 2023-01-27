@@ -1,0 +1,31 @@
+@font-face {
+    font-family: 'hack-regular';
+    src: url('fonts/Hack-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'IBMPlexSerif';
+    src: url('fonts/IBMPlexSerif-Regular.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+@import url(https://fonts.bunny.net/css?family=anybody:100,200i,300,400,400i,600,600i);
+
+@import "variables";
+@import "reset";
+@import "mixins";
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    font-family: $font-text, display;
+    scroll-behavior: smooth;
+}
+body {
+    font-size: 1.6rem;
+    font-family: $font-text, display;
+    background-color: $color-white;
+    color: $color-black;
+    padding-bottom: 5rem;
+}

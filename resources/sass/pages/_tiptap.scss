@@ -1,0 +1,143 @@
+.tiptap {
+    line-height: 1.3;
+    h1 {
+        font-size: 6rem;
+    }
+    h2 {
+        font-size: 4rem;
+    }
+    h3 {
+        font-size: 3rem;
+    }
+    h4 {
+        font-size: 2rem;
+    }
+    h5 {
+        font-size: 1.5rem;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        font-weight: 600;
+        margin: 1rem 0;
+        font-family: $font-title, display;
+    }
+
+    ul {
+        li {
+            display: flex;
+            &:before {
+                content: "•";
+                margin:0 1rem;
+            }
+        }
+        &.checked-list {
+            li {
+                display: flex;
+
+                &:before {
+                    content: "✔";
+                    margin: 0 1rem;
+                }
+            }
+        }
+    }
+
+
+    blockquote {
+        border-left: 4px solid #ddd;
+        padding-left: 1rem;
+        margin-left: 0;
+        color: #666;
+    }
+
+    hr {
+        margin: 1rem;
+    }
+    strong {
+        font-weight: 600;
+    }
+    sub {
+        font-size: 0.8em;
+        vertical-align: sub;
+    }
+    sup {
+        font-size: 0.8em;
+        vertical-align: super;
+    }
+    .lead {
+        p {
+            em {
+                font-size: 1.5em;
+                font-style: normal;
+            }
+        }
+    }
+    code {
+        padding: 0.3rem 0.5rem;
+        font-family: monospace;
+        font-size: 1.2em;
+        background-color: $color-black;
+        color: $color-white;
+        border-radius: 0.4rem;
+        margin: 1rem;
+
+
+    }
+    .hljs {
+        background-color: $color-gray-lighter;
+        padding: 1rem;
+        border-radius: 0.4rem;
+        margin: 1rem;
+        code {
+            background-color: transparent;
+            color: $color-black;
+
+        }
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+    table {
+
+    }
+
+    .filament-tiptap-hurdle {
+        margin: 1rem;
+        padding: 1rem;
+        border-radius: 0.4rem;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        &.gray {
+            background-color: $color-gray;
+            border: 1px solid $color-gray-light;
+        }
+        &.gray_light {
+            background-color: $color-gray-light;
+            border: 1px solid $color-gray;
+        }
+        &.gray_dark {
+            background-color: $color-gray-dark;
+            border: 1px solid $color-gray;
+        }
+        &.primary {
+            background-color: $color-primary;
+            border: 1px solid $color-primary-dark;
+        }
+        &.secondary {
+            background-color: $color-success;
+            border: 1px solid $color-primary-dark;
+        }
+        &.tertiary {
+            background-color: $color-danger;
+            border: 1px solid $color-danger-dark;
+        }
+        &.accent {
+            background-color: $color-pink;
+            border: 1px solid $color-pink-dark;
+        }
+
+    }
+}

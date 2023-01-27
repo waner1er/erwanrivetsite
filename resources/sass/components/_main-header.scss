@@ -1,0 +1,51 @@
+.main-header {
+    width: 100%;
+    margin: 2rem auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+
+    &__title {
+        text-align: center;
+
+
+        &__h1 {
+            font-size: 4.5rem;
+
+            @include min-width(1170px) {
+                font-size: 6rem;
+            }
+        }
+    }
+
+    &__img {
+        display: flex;
+        max-width: 15rem;
+        max-height: 15rem;
+        min-width: 15rem;
+        min-height: 15rem;
+        border-radius: 50%;
+        border: 1px solid $color-primary;
+        background: rgba($color-primary, 0.1);
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        overflow: hidden;
+        @include min-width(1170px) {
+            flex-direction: row;
+        }
+        img {
+            width: 160%;
+            height: 160%;
+            object-fit: cover;
+            object-position: top;
+        }
+    }
+
+    @include min-width(1170px) {
+        width: 96rem;
+        flex-direction: row;
+    }
+}

@@ -1,0 +1,86 @@
+.filament-tiptap {
+    &-grid {
+        display: grid;
+        margin: 1rem 0;
+
+        &__column {
+            padding: 1em;
+
+        }
+
+        @include min-width(768px) {
+            &-2 {
+                grid-template-columns: 1fr 1fr;
+
+            }
+
+            &-3 {
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+
+            &-4 {
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+            }
+
+            &-5 {
+                grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+            }
+
+            &-asymetric-right-thirds {
+                grid-template-columns: 1fr 2fr;
+
+                .filament-tiptap-grid__column {
+                    &:nth-child(1) {
+
+                    }
+
+                    &:nth-child(2) {
+
+                    }
+                }
+            }
+
+            &-asymetric-left-thirds {
+                grid-template-columns: 2fr 1fr;
+
+                .filament-tiptap-grid__column {
+                    &:nth-child(1) {
+
+                    }
+
+                    &:nth-child(2) {
+
+                    }
+                }
+            }
+
+            &-asymetric-left-fourths {
+                grid-template-columns: 1fr 3fr;
+
+                .filament-tiptap-grid__column {
+                    &:nth-child(1) {
+
+                    }
+
+                    &:nth-child(2) {
+
+                    }
+                }
+            }
+
+            &-asymetric-right-fourths {
+                grid-template-columns: 3fr 1fr;
+
+                .filament-tiptap-grid__column {
+                    &:nth-child(1) {
+
+                    }
+
+                    &:nth-child(2) {
+
+                    }
+                }
+            }
+        }
+    }
+}

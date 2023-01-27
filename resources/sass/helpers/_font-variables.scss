@@ -1,0 +1,16 @@
+.font-title {
+    font-family: $font-title;
+    font-size: 4rem;
+    font-weight: 700;
+    @include min-width(960px) {
+        font-size: 2rem;
+    }
+    @include min-width(1170px) {
+        font-size: 3rem;
+    }
+}
+
+.font-text {
+    font-size: 1.3rem;
+    font-family: $font-text;
+}
