@@ -18,4 +18,9 @@ class Post extends Model
         'thumbnail_alt',
         'content',
     ];
+
+    public function category()
+    {
+        return $this->belongsTo(BlogCategory::class, 'category_id', 'id');
+    }
 }

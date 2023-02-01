@@ -9,6 +9,7 @@ class MainHeaderComponent extends Component
     public $title;
     public $subtitle;
     public $image;
+    public $image_show;
 
     public function render()
     {

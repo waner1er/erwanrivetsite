@@ -1,7 +1,13 @@
 .page-show {
+    &__intro {
+        font-family: $font-text;
+        font-style: italic;
+        font-weight: bold;
+    }
     &__separator {
         margin: 2rem 0;
         border-top: 2px solid $color-gray-light;
         border-radius: 5px;
     }
+
 }

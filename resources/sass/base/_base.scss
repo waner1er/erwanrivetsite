@@ -28,4 +28,16 @@ body {
     background-color: $color-white;
     color: $color-black;
     padding-bottom: 5rem;
+    &.dark {
+        background-color: $color-black;
+        color: $color-white;
+    }
+}
+a[href]{
+    text-decoration: none;
+    color: $color-primary;
+    &:hover {
+        text-decoration: underline;
+        color: $color-primary-dark;
+    }
 }

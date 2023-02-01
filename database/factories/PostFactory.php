@@ -16,6 +16,7 @@ class PostFactory extends Factory
             'thumbnail_alt' => $this->faker->sentence,
             'introduction' => $this->faker->paragraph,
             'content' => $this->faker->paragraph,
+            'category_id' => $this->faker->numberBetween(1, 10),
         ];
     }
 }

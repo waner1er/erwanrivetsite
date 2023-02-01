@@ -24,40 +24,33 @@ class SettingResource extends Resource
     {
         return $form
             ->schema([
+
+                Forms\Components\TextInput::make('settings_order')
+                    ->numeric(),
+                Forms\Components\Toggle::make('active_settings'),
                 Forms\Components\TextInput::make('site_title')
-                    ->required()
                     ->maxLength(255),
+                Forms\Components\FileUpload::make('site_img'),
+                Forms\Components\TextInput::make('site_img_alt'),
                 Forms\Components\TextInput::make('site_description')
-                    ->required()
                     ->maxLength(255),
                 Forms\Components\TextInput::make('site_keywords')
-                    ->required()
                     ->maxLength(255),
                 Forms\Components\TextInput::make('site_author')
-                    ->required()
                     ->maxLength(255),
                 Forms\Components\TextInput::make('site_email')
-                    ->email()
-                    ->required()
                     ->maxLength(255),
                 Forms\Components\TextInput::make('site_phone')
-                    ->tel()
-                    ->required()
                     ->maxLength(255),
                 Forms\Components\TextInput::make('site_address')
-                    ->required()
                     ->maxLength(255),
                 Forms\Components\TextInput::make('site_facebook')
-                    ->required()
                     ->maxLength(255),
                 Forms\Components\TextInput::make('site_twitter')
-                    ->required()
                     ->maxLength(255),
                 Forms\Components\TextInput::make('site_instagram')
-                    ->required()
                     ->maxLength(255),
                 Forms\Components\TextInput::make('site_linkedin')
-                    ->required()
                     ->maxLength(255),
             ]);
     }
