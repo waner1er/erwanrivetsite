@@ -19,7 +19,7 @@ return new class extends Migration {
             $table->text('introduction')->nullable();
             $table->text('content')->nullable();
             $table->boolean('is_home_page')->default(false);
-
+            $table->boolean('is_active')->default(true);
             $table->string('slug')->unique();
             $table->string('thumbnail')->nullable();
             $table->string('thumbnail_alt')->nullable();

@@ -33,8 +33,11 @@ class PageResource extends Resource
                     ->schema([
                         Tabs::make('Heading')
                             ->tabs([
-                                Tabs\Tab::make('Content')
+                                Tabs\Tab::make('La page')
                                     ->schema([
+                                        Forms\Components\TextInput::make('ordering_number')
+                                            ->numeric()
+                                            ->minValue(1),
                                         TitleWithSlugInput::make(
                                             fieldTitle: 'title',
                                             fieldSlug: ('slug'),
@@ -58,9 +61,10 @@ class PageResource extends Resource
     {
         return $table
             ->columns([
+                Tables\Columns\TextColumn::make('ordering_number')->sortable(),
                 Tables\Columns\TextColumn::make('title')->sortable()->searchable(),
-                Tables\Columns\TextColumn::make('slug')->sortable()->searchable(),
                 Tables\Columns\ToggleColumn::make('is_home_page')->sortable(),
+                Tables\Columns\ToggleColumn::make('is_active')->sortable()->label('Publié'),
             ])
             ->filters([
                 //

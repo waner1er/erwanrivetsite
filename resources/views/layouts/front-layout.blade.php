@@ -9,10 +9,12 @@
     @livewireStyles
 </head>
 <body class="body front-layout">
+{{--<livewire:components.switch-button/>--}}
 <livewire:components.nav-menu/>
 <div>
     {{ $slot }}
 </div>
+<livewire:components.footer-component/>
 @livewireScripts
 </body>
 </html>

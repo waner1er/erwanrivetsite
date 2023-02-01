@@ -6,5 +6,9 @@ window.Alpine = Alpine;
 
 Alpine.start();
 
-import './NavMenu.js';
+import './Navmenu.js';
 import './titptap.js';
+
+import './darkMode.js';
+
+

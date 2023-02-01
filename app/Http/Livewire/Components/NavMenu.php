@@ -13,7 +13,7 @@ class NavMenu extends Component
 
     public function mount()
     {
-        $this->navItems =  Page::all();
+        $this->navItems =  Page::all()->sortBy('ordering_number');
         $this->isHomePage = Page::where('is_home_page', true)->first();
     }
     public function render()

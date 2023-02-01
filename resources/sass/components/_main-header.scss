@@ -22,8 +22,8 @@
 
     &__img {
         display: flex;
-        max-width: 15rem;
-        max-height: 15rem;
+        max-width: 20rem;
+        max-height: 20rem;
         min-width: 15rem;
         min-height: 15rem;
         border-radius: 50%;
@@ -37,8 +37,8 @@
             flex-direction: row;
         }
         img {
-            width: 160%;
-            height: 160%;
+            width: 100%;
+            height: 100%;
             object-fit: cover;
             object-position: top;
         }

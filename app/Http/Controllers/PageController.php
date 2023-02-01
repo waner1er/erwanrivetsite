@@ -21,4 +21,9 @@ class PageController extends Controller
         }
         return view('pages.show', compact('page'));
     }
+
+    public function contact()
+    {
+        return view('pages.contact');
+    }
 }
