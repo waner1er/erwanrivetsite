@@ -2,10 +2,12 @@
 
 namespace App\View\Components;
 
+use App\Models\Setting;
 use Illuminate\View\Component;
 
 class FrontLayout extends Component
 {
+    public $settings;
     /**
      * Create a new component instance.
      *
@@ -13,7 +15,7 @@ class FrontLayout extends Component
      */
     public function __construct()
     {
-        //
+        $this->settings = Setting::firstOrFail();
     }
 
     /**

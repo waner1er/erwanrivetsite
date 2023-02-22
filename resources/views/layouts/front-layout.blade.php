@@ -3,8 +3,12 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="{{ $settings->site_description }}" />
+    <meta name="author" content="{{ $settings->site_author }}" />
+    <meta name="robots" content="index, follow" />
+    <meta name="googlebot" content="index, follow" />
 
-    <title>{{ config('app.name') }}</title>
+    <title>{{ $settings->site_title ?? config('app.name') }}</title>
     @vite(['resources/sass/style.scss', 'resources/js/front.js'])
     @livewireStyles
 </head>
