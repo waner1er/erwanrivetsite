@@ -1,0 +1,517 @@
+/* MVP.css v1.12 - https://github.com/andybrewer/mvp */
+
+$active-brightness: 0.85;
+$border-radius: 5px;
+$box-shadow: 2px 2px 10px;
+$color-accent: #118bee15;
+$color-bg: #dbfff1;
+$color-bg-secondary : #32dac1;
+$color-link: #0cb2a6;
+$color-secondary: #920de9;
+$color-secondary-accent: #920de90b;
+$color-shadow: #f4f4f4;
+$color-table: #118bee;
+$color-text: #252525;
+$color-text-secondary: #999;
+$font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+$hover-brightness: 1.2;
+$justify-important: center;
+$justify-normal: left;
+$line-height: 1.5;
+$width-card: 285px;
+$width-card-medium: 460px;
+$width-card-wide: 800px;
+$width-content: 1080px;
+$color-black: #000;
+$font-title: "Playfair Display", serif;
+$font-text: "Roboto", serif;
+
+$color-black: #000;
+$color-white: #fff;
+$color-gray: #ccc;
+$color-gray-dark: #999;
+$color-gray-light: #eee;
+$color-gray-lighter: #f5f5f5;
+
+
+$color-primary: #36c4ae;
+$color-primary-dark: #0e9182;
+$color-success: #a2d9a2;
+$color-info: #84d3bd;
+$color-warning: #f0ad4e;
+$color-danger: #d9534f;
+$color-danger-dark: #c9302c;
+
+$color-blue-light : rgba($color-info, 0.3);
+$color-blue-x-light : rgba($color-info, 0.1);
+
+$color-pink: #ff5fb7;
+$color-pink-light: #ff8fd7;
+$color-pink-dark: #ff2f97;
+
+/* Layout */
+article aside {
+    background: $color-secondary-accent;
+    border-left: 4px solid $color-secondary;
+    padding: 0.01rem 0.8rem;
+}
+
+body {
+    background: $color-bg;
+    color: $color-text;
+    font-family: $font-family;
+    line-height: $line-height;
+    margin: 0;
+    overflow-x: hidden;
+    padding: 0;
+}
+
+footer,
+header,
+main {
+    margin: 0 auto;
+    max-width: $width-content;
+    padding: 3rem 1rem;
+}
+
+hr {
+    background-color: $color-bg-secondary;
+    border: none;
+    height: 1px;
+    margin: 4rem 0;
+    width: 100%;
+}
+
+section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: $justify-important;
+}
+
+section img,
+article img {
+    max-width: 100%;
+}
+
+section pre {
+    overflow: auto;
+}
+
+section aside {
+    border: 1px solid $color-bg-secondary;
+    border-radius: $border-radius;
+    box-shadow: $box-shadow $color-shadow;
+    margin: 1rem;
+    padding: 1.25rem;
+    width: $width-card;
+}
+
+section aside:hover {
+    box-shadow: $box-shadow $color-bg-secondary;
+}
+
+[hidden] {
+    display: none;
+}
+
+/* Headers */
+article header,
+div header,
+main header {
+    padding-top: 0;
+}
+
+header {
+    text-align: $justify-important;
+}
+
+header a b,
+header a em,
+header a i,
+header a strong {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+}
+
+header nav img {
+    margin: 1rem 0;
+}
+
+section header {
+    padding-top: 0;
+    width: 100%;
+}
+
+/* Nav */
+nav {
+    align-items: center;
+    display: flex;
+    font-weight: bold;
+    margin-bottom: 7rem;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: auto auto auto 5rem;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 0.5rem;
+    position: relative;
+    text-align: left;
+}
+
+/* Nav Dropdown */
+nav ul li:hover ul {
+    display: block;
+}
+
+nav ul li ul {
+    background: $color-bg;
+    border: 1px solid $color-bg-secondary;
+    border-radius: $border-radius;
+    box-shadow: $box-shadow $color-shadow;
+    display: none;
+    height: auto;
+    left: -2px;
+    padding: .5rem 1rem;
+    position: absolute;
+    top: 1.7rem;
+    white-space: nowrap;
+    width: auto;
+    z-index: 1;
+}
+
+nav ul li ul::before {
+    /* fill gap above to make mousing over them easier */
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -0.5rem;
+    height: 0.5rem;
+}
+
+nav ul li ul li,
+nav ul li ul li a {
+    display: block;
+}
+
+/* Typography */
+code,
+samp {
+    background-color: $color-accent;
+    border-radius: $border-radius;
+    color: $color-text;
+    display: inline-block;
+    margin: 0 0.1rem;
+    padding: 0 0.5rem;
+}
+
+details {
+    margin: 1.3rem 0;
+}
+
+details summary {
+    font-weight: bold;
+    cursor: pointer;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    line-height: $line-height;
+}
+
+mark {
+    padding: 0.1rem;
+}
+
+ol li,
+ul li {
+    padding: 0.2rem 0;
+}
+
+p {
+    margin: 0.75rem 0;
+    padding: 0;
+    width: 100%;
+}
+
+pre {
+    margin: 1rem 0;
+    max-width: $width-card-wide;
+    padding: 1rem 0;
+}
+
+pre code,
+pre samp {
+    display: block;
+    max-width: $width-card-wide;
+    padding: 0.5rem 2rem;
+    white-space: pre-wrap;
+}
+
+small {
+    color: $color-text-secondary;
+}
+
+sup {
+    background-color: $color-secondary;
+    border-radius: $border-radius;
+    color: $color-bg;
+    font-size: xx-small;
+    font-weight: bold;
+    margin: 0.2rem;
+    padding: 0.2rem 0.3rem;
+    position: relative;
+    top: -2px;
+}
+
+/* Links */
+a {
+    color: $color-link;
+    display: inline-block;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+a:active {
+    filter: brightness($active-brightness);
+    text-decoration: underline;
+}
+
+a:hover {
+    filter: brightness($hover-brightness);
+    text-decoration: underline;
+}
+
+a b,
+a em,
+a i,
+a strong,
+button,
+input[type="submit"] {
+    border-radius: $border-radius;
+    display: inline-block;
+    font-size: medium;
+    font-weight: bold;
+    line-height: $line-height;
+    margin: 0.5rem 0;
+    padding: 1rem 2rem;
+}
+
+button,
+input[type="submit"] {
+    font-family: $font-family;
+}
+
+button:active,
+input[type="submit"]:active {
+    filter: brightness($active-brightness);
+}
+
+button:hover,
+input[type="submit"]:hover {
+    cursor: pointer;
+    filter: brightness($hover-brightness);
+}
+
+a b,
+a strong,
+button,
+input[type="submit"] {
+    background-color: $color-link;
+    border: 2px solid $color-link;
+    color: $color-bg;
+}
+
+a em,
+a i {
+    border: 2px solid $color-link;
+    border-radius: $border-radius;
+    color: $color-link;
+    display: inline-block;
+    padding: 1rem 2rem;
+}
+
+article aside a {
+    color: $color-secondary;
+}
+
+/* Images */
+figure {
+    margin: 0;
+    padding: 0;
+}
+
+figure img {
+    max-width: 100%;
+}
+
+figure figcaption {
+    color: $color-text-secondary;
+}
+
+/* Forms */
+button:disabled,
+input:disabled {
+    background: $color-bg-secondary;
+    border-color: $color-bg-secondary;
+    color: $color-text-secondary;
+    cursor: not-allowed;
+}
+
+button[disabled]:hover,
+input[type="submit"][disabled]:hover {
+    filter: none;
+}
+
+form {
+    border-radius: $border-radius;
+    box-shadow: $box-shadow $color-shadow;
+    display: block;
+    max-width: $width-card-wide;
+    min-width: $width-card;
+    padding: 1.5rem;
+    text-align: $justify-normal;
+    margin: auto;
+}
+
+form header {
+    margin: 1.5rem 0;
+    padding: 1.5rem 0;
+}
+
+input,
+label,
+select,
+textarea {
+    display: block;
+    font-size: inherit;
+    max-width: $width-card-wide;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    display: inline-block;
+}
+
+input[type="checkbox"]+label,
+input[type="radio"]+label {
+    display: inline-block;
+    font-weight: normal;
+    position: relative;
+    top: 1px;
+}
+
+input[type="range"] {
+    padding: 0.4rem 0;
+}
+
+input,
+select,
+textarea {
+    border: 1px solid $color-bg-secondary;
+    border-radius: $border-radius;
+    margin-bottom: 1rem;
+    padding: 0.4rem 0.8rem;
+}
+
+input[type="text"],
+textarea {
+    width: calc(100% - 1.6rem);
+}
+
+input[readonly],
+textarea[readonly] {
+    background-color: $color-bg-secondary;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 0.2rem;
+}
+
+/* Popups */
+dialog {
+    border: 1px solid $color-bg-secondary;
+    border-radius: $border-radius;
+    box-shadow: $box-shadow $color-shadow;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    z-index: 999;
+}
+
+/* Tables */
+table {
+    border: 1px solid $color-bg-secondary;
+    border-radius: $border-radius;
+    border-spacing: 0;
+    display: inline-block;
+    max-width: 100%;
+    overflow-x: auto;
+    padding: 0;
+    white-space: nowrap;
+}
+
+table td,
+table th,
+table tr {
+    padding: 0.4rem 0.8rem;
+    text-align: $justify-important;
+}
+
+table thead {
+    background-color: $color-table;
+    border-collapse: collapse;
+    border-radius: $border-radius;
+    color: $color-bg;
+    margin: 0;
+    padding: 0;
+}
+
+table thead th:first-child {
+    border-top-left-radius: $border-radius;
+}
+
+table thead th:last-child {
+    border-top-right-radius: $border-radius;
+}
+
+table thead th:first-child,
+table tr td:first-child {
+    text-align: $justify-normal;
+}
+
+table tr:nth-child(even) {
+    background-color: $color-accent;
+}
+
+/* Quotes */
+blockquote {
+    display: block;
+    font-size: x-large;
+    line-height: $line-height;
+    margin: 1rem auto;
+    max-width: $width-card-medium;
+    padding: 1.5rem 1rem;
+    text-align: $justify-important;
+}
+
+blockquote footer {
+    color: $color-text-secondary;
+    display: block;
+    font-size: small;
+    line-height: $line-height;
+    padding: 1.5rem 0;
+}
+

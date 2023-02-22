@@ -8,11 +8,15 @@
         position: absolute;
         top: 2rem;
         right: 2rem;
-        background: transparent;
+        background: $color-primary;
         outline: none;
         border: none;
-        border-radius: $border-radius;
+        display: flex;
+        padding: 4px;
+        border-radius: 0.6em;
         transition: all 0.3s ease;
+        max-width: 50px;
+
 
         &:hover {
             transition: all 0.3s ease;
@@ -52,11 +56,18 @@
     &__logo {
         margin: 2rem;
 
+
         &__link {
             &__img {
                 max-width: 15rem;
                 height: auto;
+                padding: 1rem;
             }
+        }
+        &__img {
+            max-width: 15rem;
+            height: auto;
+            padding: 1rem;
         }
     }
 
@@ -99,7 +110,7 @@
 
         .nav-menu__logo {
             margin: 5rem 0 2rem 0;
-            background: transparent;
+            background: $color-white;
             color: $color-primary;
             outline: none;
             border: none;
@@ -110,15 +121,7 @@
             justify-content: center;
             align-items: center;
 
-            &:hover {
-                background: $color-primary;
-                color: $color-white;
-                cursor: pointer;
 
-                path {
-                    color: $color-white;
-                }
-            }
         }
 
         .nav-menu__navigation {
@@ -161,6 +164,7 @@
                 color: $color-primary;
                 border-radius: $border-radius;
             }
+
             &__item {
                 list-style: none;
                 margin: 1rem 0;
@@ -202,11 +206,6 @@
                 margin: 0 2rem;
                 transition: all ease-in-out 0.5s;
 
-                &:hover {
-                    transform: scale(1.1);
-                    transition: all ease-in-out 0.5s;
-                }
-
                 &__link {
                     color: $color-primary;
                     text-decoration: none;
@@ -216,6 +215,7 @@
                     &:hover {
                         color: $color-black;
                         cursor: pointer;
+                        text-decoration: none !important;
 
                     }
 
@@ -232,12 +232,6 @@
             text-align: center;
 
             &__item {
-                transition: all ease-in-out 0.5s;
-
-                &:hover {
-                    transform: scale(1.1);
-                    transition: all ease-in-out 0.5s;
-                }
 
                 &__link {
                     padding: 1rem 2rem;
@@ -246,6 +240,10 @@
                     text-decoration: none;
                     transition: all ease-in-out 0.5s;
                     text-transform: uppercase;
+
+                    &.active {
+                        color : $color-black;
+                    }
 
                     &:hover {
                         //    background: rgba($color-primary, 0.5);

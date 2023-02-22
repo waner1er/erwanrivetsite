@@ -6,6 +6,6 @@
     border-radius: $border-radius;
     @include min-width(1170px) {
         max-width: calc(100% - 25rem);
-
+        margin-bottom: 10rem;
     }
 }

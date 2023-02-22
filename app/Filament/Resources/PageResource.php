@@ -5,6 +5,7 @@ namespace App\Filament\Resources;
 use App\Filament\Resources\PageResource\Pages;
 use App\Filament\Resources\PageResource\RelationManagers;
 use App\Models\Page;
+use Awcodes\Curator\Components\Forms\CuratorPicker;
 use Camya\Filament\Forms\Components\TitleWithSlugInput;
 use Filament\Forms;
 use Filament\Forms\Components\Grid;
@@ -37,7 +38,9 @@ class PageResource extends Resource
                                     ->schema([
                                         Forms\Components\TextInput::make('ordering_number')
                                             ->numeric()
-                                            ->minValue(1),
+                                            ->minValue(1)
+                                            ->placeholder(Page::count() + 1)
+                                            ->required(),
                                         TitleWithSlugInput::make(
                                             fieldTitle: 'title',
                                             fieldSlug: ('slug'),
@@ -49,7 +52,7 @@ class PageResource extends Resource
                                     ]),
                                 Tabs\Tab::make('Infos')
                                     ->schema([
-                                        Forms\Components\FileUpload::make('thumbnail')->required(),
+                                        CuratorPicker::make('thumbnail')->required(),
                                         Forms\Components\TextInput::make('thumbnail_alt')->required(),
                                     ]),
                             ])

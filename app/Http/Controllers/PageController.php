@@ -24,6 +24,7 @@ class PageController extends Controller
 
     public function contact()
     {
-        return view('pages.contact');
+        $page = Page::where('title', 'contact')->first();
+        return view('pages.contact', ['page' => $page]);
     }
 }
