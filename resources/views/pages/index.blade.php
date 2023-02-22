@@ -4,4 +4,5 @@
     <a href="{{ route('pages.show', $page->slug) }}">{{ $page->title }}</a>
 </div>
    @endforeach
+    <x-curator-glider/>
 </x-front-layout>
