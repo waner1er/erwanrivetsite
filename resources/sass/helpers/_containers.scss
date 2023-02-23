@@ -1,11 +1,11 @@
 .container {
     margin: 0 auto;
     padding: 1rem;
-    border: 1px solid $color-primary;
+    //border: 1px solid $color-primary;
     overflow: hidden;
     border-radius: $border-radius;
     @include min-width(1170px) {
-        max-width: calc(100% - 25rem);
+        max-width: 96rem;
         margin-bottom: 10rem;
     }
 }

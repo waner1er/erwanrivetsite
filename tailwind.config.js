@@ -16,7 +16,8 @@ module.exports = {
             gridTemplateColumns: {
                 // Simple 16 column grid
                 'form-layout': '1fr 3fr',
-            }
+            },
+
         },
     },
 

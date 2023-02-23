@@ -1,6 +1,6 @@
 <x-front-layout>
-    <livewire:components.main-header-component :title="$page->title" :subtitle="$page->subtitle"
-                                               image="{{Storage::url($page->thumbnail)}}" image_show/>
+{{--    @dd($page)--}}
+    <livewire:components.main-header-component :title="$page->title" :subtitle="$page->subtitle"/>
 
     <livewire:components.contact-form/>
 

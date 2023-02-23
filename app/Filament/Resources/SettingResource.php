@@ -5,6 +5,7 @@ namespace App\Filament\Resources;
 use App\Filament\Resources\SettingResource\Pages;
 use App\Filament\Resources\SettingResource\RelationManagers;
 use App\Models\Setting;
+use Awcodes\Curator\Components\Forms\CuratorPicker;
 use Filament\Forms;
 use Filament\Resources\Form;
 use Filament\Resources\Resource;
@@ -16,6 +17,8 @@ use Illuminate\Database\Eloquent\SoftDeletingScope;
 class SettingResource extends Resource
 {
     protected static ?string $model = Setting::class;
+
+    protected static ?int $navigationSort = 3;
 
     protected static ?string $navigationIcon = 'heroicon-o-adjustments';
 
@@ -30,7 +33,7 @@ class SettingResource extends Resource
                 Forms\Components\Toggle::make('active_settings'),
                 Forms\Components\TextInput::make('site_title')
                     ->maxLength(255),
-                Forms\Components\FileUpload::make('site_img'),
+                CuratorPicker::make('site_img'),
                 Forms\Components\TextInput::make('site_img_alt'),
                 Forms\Components\TextInput::make('site_description')
                     ->maxLength(255),
