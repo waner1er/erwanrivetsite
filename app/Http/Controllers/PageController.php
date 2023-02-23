@@ -22,9 +22,5 @@ class PageController extends Controller
         return view('pages.show', compact('page'));
     }
 
-    public function contact()
-    {
-        $page = Page::where('title', 'contact')->first();
-        return view('pages.contact', ['page' => $page]);
-    }
+
 }

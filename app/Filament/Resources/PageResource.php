@@ -23,6 +23,7 @@ use Mohamedsabil83\FilamentFormsTinyeditor\Components\TinyEditor;
 class PageResource extends Resource
 {
     protected static ?string $model = Page::class;
+    protected static ?int $navigationSort = 2;
 
     protected static ?string $navigationIcon = 'heroicon-o-collection';
 
@@ -42,8 +43,9 @@ class PageResource extends Resource
                                             ->placeholder(Page::count() + 1)
                                             ->required(),
                                         TitleWithSlugInput::make(
-                                            fieldTitle: 'title',
-                                            fieldSlug: ('slug'),
+                                            'title',
+                                            'slug',
+                                            '/page/',
                                             slugSlugifier: fn($string) => Str::slug($string),
                                         ),
                                         Forms\Components\TextInput::make('subtitle'),

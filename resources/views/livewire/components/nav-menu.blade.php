@@ -20,6 +20,12 @@
                          active
                       @endif" href="{{ route('pages.contact') }}">Contact</a>
         </li>
+        <li class="nav-menu__navigation__item">
+            <a class="nav-menu__navigation__item__link
+                      @if(url()->current() === route('blog.index'))
+                         active
+                      @endif" href="{{ route('blog.index') }}">Blog</a>
+        </li>
     </ul>
     <button class="nav-menu__burger">
         <x-pictos.burger/>

@@ -1,6 +1,9 @@
 <x-front-layout>
-    <livewire:components.main-header-component title="Categories" subtitle="toutes les categories" image_show image="https://picsum.photos/250" />
-        <div class="container blog-category">
+    <livewire:components.main-header-component title="Blog" subtitle="bienvenue sur le blog" image_show image="https://picsum.photos/250" />
+    <div class="container">
+        écrire une introduction
+    </div>
+    <div class="container blog-category">
         @foreach($categories as $category)
             @if($category->posts->count() > 0)
                 <div class="blog-category__cat" data-expand-target>

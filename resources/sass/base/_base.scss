@@ -1,6 +1,7 @@
 @import "variables";
 @import "reset";
 @import "mixins";
+@import 'mvp';
 html {
     font-size: 62.5%;
     overflow-x: hidden;
@@ -8,7 +9,7 @@ html {
     scroll-behavior: smooth;
 }
 body {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     font-family: $font-text, display;
     background-color: $color-blue-x-light;
     color: $color-black;

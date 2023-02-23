@@ -25,9 +25,20 @@ $color-pink-dark: #ff2f97;
 
 
 // fonts variables
+@font-face {
+    font-family: 'hack-regular';
+    src: url('../fonts/Hack-Regular.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+}
 
-$font-title : 'hack-regular';
-$font-text : 'anybody';
-
+@font-face {
+    font-family: 'alarm-clock';
+    src: url('../fonts/alarm-clock.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+$font-title: 'alarm-clock', sans-serif;
+$font-text: 'zen-dots';
 $border-radius: 0.6em;
 
