@@ -18,6 +18,9 @@ body {
         color: $color-white;
     }
 }
+main {
+    min-height: 72vh;
+}
 a[href]{
     text-decoration: none;
     color: $color-primary;
