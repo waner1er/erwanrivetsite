@@ -13,6 +13,8 @@ class Setting extends Model
         'settings_order',
         'active_settings',
         'site_logo',
+        'site_about_paragraph',
+        'site_about_title',
         'site_title',
         'site_img',
         'site_img_alt',
@@ -22,10 +24,10 @@ class Setting extends Model
         'site_email',
         'site_phone',
         'site_address',
-        'site_facebook',
-        'site_twitter',
-        'site_instagram',
-        'site_linkedin',
+        'social_media',
+    ];
 
+    protected $casts = [
+        'social_media' => 'array',
     ];
 }

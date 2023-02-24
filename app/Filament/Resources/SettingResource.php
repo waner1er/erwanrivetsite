@@ -7,10 +7,14 @@ use App\Filament\Resources\SettingResource\RelationManagers;
 use App\Models\Setting;
 use Awcodes\Curator\Components\Forms\CuratorPicker;
 use Filament\Forms;
+use Filament\Forms\Components\Repeater;
+use Filament\Forms\Components\Select;
+use Filament\Forms\Components\TextInput;
 use Filament\Resources\Form;
 use Filament\Resources\Resource;
 use Filament\Resources\Table;
 use Filament\Tables;
+use FilamentTiptapEditor\TiptapEditor;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 
@@ -31,30 +35,30 @@ class SettingResource extends Resource
                 Forms\Components\TextInput::make('settings_order')
                     ->numeric(),
                 Forms\Components\Toggle::make('active_settings'),
-                Forms\Components\TextInput::make('site_title')
-                    ->maxLength(255),
-                CuratorPicker::make('site_img'),
-                Forms\Components\TextInput::make('site_img_alt'),
-                Forms\Components\TextInput::make('site_description')
-                    ->maxLength(255),
-                Forms\Components\TextInput::make('site_keywords')
-                    ->maxLength(255),
-                Forms\Components\TextInput::make('site_author')
-                    ->maxLength(255),
-                Forms\Components\TextInput::make('site_email')
-                    ->maxLength(255),
-                Forms\Components\TextInput::make('site_phone')
-                    ->maxLength(255),
-                Forms\Components\TextInput::make('site_address')
-                    ->maxLength(255),
-                Forms\Components\TextInput::make('site_facebook')
-                    ->maxLength(255),
-                Forms\Components\TextInput::make('site_twitter')
-                    ->maxLength(255),
-                Forms\Components\TextInput::make('site_instagram')
-                    ->maxLength(255),
-                Forms\Components\TextInput::make('site_linkedin')
-                    ->maxLength(255),
+                Forms\Components\TextInput::make('title'),
+                CuratorPicker::make('img'),
+                Forms\Components\TextInput::make('img_alt'),
+                Forms\Components\TextInput::make('description'),
+                Forms\Components\TextInput::make('about_title'),
+                TiptapEditor::make('about'),
+                Forms\Components\TextInput::make('author'),
+                Forms\Components\TextInput::make('email'),
+                Forms\Components\TextInput::make('phone'),
+                Forms\Components\TextInput::make('address'),
+                Repeater::make('social_media')
+                    ->schema([
+                        TextInput::make('social_url')->required(),
+                        Select::make('social_icon')
+                            ->options([
+                                'facebook' => 'Facebook',
+                                'twitter' => 'Twitter',
+                                'github' => 'Github',
+                                'linkedin' => 'Linkedin',
+                                ])
+                            ->required(),
+                        CuratorPicker::make('custom_social_icon'),
+                    ])
+                    ->columns(1)
             ]);
     }
 
@@ -62,7 +66,7 @@ class SettingResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('site_title'),
+                Tables\Columns\TextColumn::make('title'),
                 Tables\Columns\TextColumn::make('settings_order'),
                 Tables\Columns\TextColumn::make('updated_at')
                     ->dateTime(),

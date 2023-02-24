@@ -4,8 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-return new class extends Migration
-{
+return new class extends Migration {
     /**
      * Run the migrations.
      *
@@ -15,19 +14,22 @@ return new class extends Migration
     {
         Schema::create('settings', function (Blueprint $table) {
             $table->id();
-            $table->integer('settings_order')->unique();
-            $table->boolean('active_settings')->unique();
-            $table->string('site_title')->unique();
-            $table->string('site_description')->unique();
-            $table->string('site_keywords')->unique();
-            $table->string('site_author')->unique();
-            $table->string('site_email')->unique();
-            $table->string('site_phone')->unique();
-            $table->string('site_address')->unique();
-            $table->string('site_facebook')->unique();
-            $table->string('site_twitter')->unique();
-            $table->string('site_instagram')->unique();
-            $table->string('site_linkedin')->unique();
+            $table->integer('settings_order');
+            $table->boolean('active_settings');
+            $table->string('title');
+            $table->string('description');
+            $table->string('img')->nullable();
+            $table->string('img_alt')->nullable();
+            $table->string('author');
+            $table->text('about_paragraph');
+            $table->string('about_title');
+            $table->string('email');
+            $table->string('phone');
+            $table->string('address');
+            $table->string('footer_about_title')->nullable();
+            $table->text('footer_about_paragraph');
+            $table->json('social_media')->nullable();
+
             $table->timestamps();
         });
     }
