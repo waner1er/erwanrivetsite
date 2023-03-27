@@ -23,45 +23,45 @@
                 <p>{{ $settings->description }}</p>
             </div>
             <div class="footer__center__icons">
-                @if($settings->social_media)
-                    @foreach($settings->social_media as $social_media)
-                        @if($social_media['social_icon'] === 'facebook')
-                            @if($social_media['custom_social_icon'])
-                                <a href="{{ $social_media['social_url'] }}" class="footer__center__icons__link">
-                                    <x-curator-glider :media="$social_media['custom_social_icon']"/>
-                                </a>
-                            @else
-                                <a href="{{ $social_media['social_url'] }}" class="footer__center__icons__link">
-                                    <x-pictos.facebook/>
-                                </a>
-                            @endif
-                        @elseif($social_media['social_icon'] == 'github')
-                            @if($social_media['custom_social_icon'])
-                                <a href="{{ $social_media['social_url'] }}" class="footer__center__icons__link">
-                                    <x-curator-glider :media="$social_media['custom_social_icon']"/>
-                                </a>
-                            @else
-                                <a href="{{ $social_media['social_url'] }}" class="footer__center__icons__link">
-                                    <x-pictos.github/>
-                                </a>
-                            @endif
-                        @elseif($social_media['social_icon'] == 'linkedin')
-                            @if($social_media['custom_social_icon'])
-                                <a href="{{ $social_media['social_url'] }}" class="footer__center__icons__link">
-                                    <x-curator-glider :media="$social_media['custom_social_icon']"/>
-                                </a>
-                            @else
-                                <a href="{{ $social_media['social_url'] }}" class="footer__center__icons__link">
-                                    <x-pictos.linkedin/>
-                                </a>
-                            @endif
-                        @else
-                            <a href="{{ $social_media['social_url'] }}" class="footer__center__icons__link">
-                                <x-curator-glider :media="$social_media['custom_social_icon']"/>
-                            </a>
-                        @endif
-                    @endforeach
-                @endif
+{{--                @if($settings->social_media && count($settings->social_media) > 0)--}}
+{{--                    @foreach($settings->social_media as $social_media)--}}
+{{--                        @if($social_media['social_icon'] === 'facebook')--}}
+{{--                            @if($social_media['custom_social_icon'])--}}
+{{--                                <a href="{{ $social_media['social_url'] }}" class="footer__center__icons__link">--}}
+{{--                                    <x-curator-glider :media="$social_media['custom_social_icon']"/>--}}
+{{--                                </a>--}}
+{{--                            @else--}}
+{{--                                <a href="{{ $social_media['social_url'] }}" class="footer__center__icons__link">--}}
+{{--                                    <x-pictos.facebook/>--}}
+{{--                                </a>--}}
+{{--                            @endif--}}
+{{--                        @elseif($social_media['social_icon'] == 'github')--}}
+{{--                            @if($social_media['custom_social_icon'])--}}
+{{--                                <a href="{{ $social_media['social_url'] }}" class="footer__center__icons__link">--}}
+{{--                                    <x-curator-glider :media="$social_media['custom_social_icon']"/>--}}
+{{--                                </a>--}}
+{{--                            @else--}}
+{{--                                <a href="{{ $social_media['social_url'] }}" class="footer__center__icons__link">--}}
+{{--                                    <x-pictos.github/>--}}
+{{--                                </a>--}}
+{{--                            @endif--}}
+{{--                        @elseif($social_media['social_icon'] == 'linkedin')--}}
+{{--                            @if($social_media['custom_social_icon'])--}}
+{{--                                <a href="{{ $social_media['social_url'] }}" class="footer__center__icons__link">--}}
+{{--                                    <x-curator-glider :media="$social_media['custom_social_icon']"/>--}}
+{{--                                </a>--}}
+{{--                            @else--}}
+{{--                                <a href="{{ $social_media['social_url'] }}" class="footer__center__icons__link">--}}
+{{--                                    <x-pictos.linkedin/>--}}
+{{--                                </a>--}}
+{{--                            @endif--}}
+{{--                        @else--}}
+{{--                            <a href="{{ $social_media['social_url'] }}" class="footer__center__icons__link">--}}
+{{--                                <x-curator-glider :media="$social_media['custom_social_icon']"/>--}}
+{{--                            </a>--}}
+{{--                        @endif--}}
+{{--                    @endforeach--}}
+{{--                @endif--}}
             </div>
         </div>
     </div>
@@ -69,7 +69,7 @@
     <div class="footer__right">
         <div class="footer__right__image">
 {{--            @dd($settings)--}}
-            <x-curator-glider :media="$settings->img "/>
+{{--            <x-curator-glider :media="$settings->img "/>--}}
         </div>
         <p class="footer__right__credits">{{ config('app.name') . ' ' .date('Y')}}</p>
     </div>

@@ -45,20 +45,20 @@ class SettingResource extends Resource
                 Forms\Components\TextInput::make('email'),
                 Forms\Components\TextInput::make('phone'),
                 Forms\Components\TextInput::make('address'),
-                Repeater::make('social_media')
-                    ->schema([
-                        TextInput::make('social_url')->required(),
-                        Select::make('social_icon')
-                            ->options([
-                                'facebook' => 'Facebook',
-                                'twitter' => 'Twitter',
-                                'github' => 'Github',
-                                'linkedin' => 'Linkedin',
-                                ])
-                            ->required(),
-                        CuratorPicker::make('custom_social_icon'),
-                    ])
-                    ->columns(1)
+//                Repeater::make('social_media')
+//                    ->schema([
+//                        TextInput::make('social_url')->required(),
+//                        Select::make('social_icon')
+//                            ->options([
+//                                'facebook' => 'Facebook',
+//                                'twitter' => 'Twitter',
+//                                'github' => 'Github',
+//                                'linkedin' => 'Linkedin',
+//                            ])
+//                            ->required(),
+//                        CuratorPicker::make('custom_social_icon'),
+//                    ])->nullable()
+//                    ->columns(1)
             ]);
     }
 
