@@ -14,7 +14,7 @@ class MainLogo extends Component
     public function mount()
     {
         $this->slug = Page::where('is_home_page', true)->firstOrFail()->slug;
-        $this->img = Setting::firstOrFail()->site_img;
+        $this->img = Setting::firstOrFail()->img;
     }
 
     public function render()

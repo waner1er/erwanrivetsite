@@ -3,6 +3,7 @@
     @livewire('components.main-logo')
 
     <ul class="nav-menu__navigation">
+        <x-pictos.facebook/>
         @foreach($navItems as $navitem)
             @if($navitem->slug !== $isHomePage->slug && $navitem->is_active)
                 <li class="nav-menu__navigation__item ">

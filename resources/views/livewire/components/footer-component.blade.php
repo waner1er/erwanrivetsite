@@ -68,7 +68,8 @@
 
     <div class="footer__right">
         <div class="footer__right__image">
-{{--            <x-curator-glider :media="$settings->img "/>--}}
+{{--            @dd($settings)--}}
+            <x-curator-glider :media="$settings->img "/>
         </div>
         <p class="footer__right__credits">{{ config('app.name') . ' ' .date('Y')}}</p>
     </div>

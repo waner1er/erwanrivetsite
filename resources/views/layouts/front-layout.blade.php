@@ -15,7 +15,6 @@
 </head>
 <body class="body front-layout">
 <main id="main">
-    {{--<livewire:components.switch-button/>--}}
     <livewire:components.nav-menu/>
     <div>
         {{ $slot }}
